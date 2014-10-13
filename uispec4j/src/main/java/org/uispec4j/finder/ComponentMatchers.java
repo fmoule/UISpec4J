@@ -76,7 +76,7 @@ public class ComponentMatchers {
         }
 
         JLabel label = ComponentUtils.findLabelFor(awtComp);
-        return label == null ? false : displayedNameSubstring(labelName).matches(label);
+        return label != null && displayedNameSubstring(labelName).matches(label);
       }
     };
   }
